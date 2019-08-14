@@ -1,0 +1,2 @@
+default['starter']['packages'] = []
+
