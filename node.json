@@ -1,0 +1,46 @@
+{
+
+   "test": {
+    "packages" : [ {
+      "name" : "mongodb-org",
+      "version" : "3.2.22-1.el7"
+    }, {
+      "name" : "mongodb-org-server",
+      "version" : "3.2.22-1.el7"
+    }, {
+      "name" : "mongodb-org-shell",
+      "version" : "3.2.22-1.el7"
+    }, {
+      "name" : "mongodb-org-mongos",
+      "version" : "3.2.22-1.el7"
+    }, {
+      "name" : "mongodb-org-tools",
+      "version" : "3.2.22-1.el7"
+    } ]
+   },
+
+
+"repo" : {
+ "mongo" : [ {
+  "baseurl" : "https://repo.mongodb.org/yum/redhat/7Server/mongodb-org/3.2/x86_64/",
+  "gpgkey" : "https://www.mongodb.org/static/pgp/server-3.2.asc"
+}]
+},
+
+
+"mongodb" : {
+  "users": [
+        {
+          "username": "aithaa12311",
+          "password": "netwitness",
+          "roles": ["userAdminAnyDatabase", "admin"],
+          "database": "admin",
+          "admin_username": "myUserAdmin"
+        }
+      ]
+
+},
+"run_list": [
+    "recipe[starter::default]"
+]
+}
